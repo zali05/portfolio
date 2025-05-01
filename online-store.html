@@ -1,0 +1,96 @@
+<!-- darkest-souls.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Store | Zain Ali</title>
+  <link rel="stylesheet" href="index.css"/>
+  <style>
+    /* Constrain & center the screenshot */
+    .project-header-image {
+      display: block;
+      margin: 1.5rem auto;     /* more breathing room */
+      width: 95%;              /* take up 80% of the container */
+      max-width: 1000px;        /* but never grow beyond 800px */
+      min-width: 400px;        /* ensure it’s not too narrow on big screens */
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- header/nav -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__link">&larr; Back to Portfolio</a>
+    </nav>
+    <div class="header__text-box row">
+        <div class="header__text">
+            <img
+                src="./images/store.png"
+                alt="Image of Online Store app"
+                class="project-header-image"
+            />
+        </div>
+      </div>
+  </header>
+
+  <!-- project screenshot -->
+  <main class="container project-detail">
+    <h1>Darkest Souls</h1>
+
+    <section>
+      <h2>Summary</h2>
+      <p>
+        This project was made as a halloween concept store. The emphasis was to create an online store using Java and SQL, developing a robust and scalable data 
+        schema, followed by the development of efficient real time data querying capabilities.
+      </p>
+    </section>
+
+    <section>
+      <h2>Core Features</h2>
+      <ul>
+        <li><strong>Create Account:</strong> `accountcreation.jsp` with form‐validation and SQL transaction rollback.</li>
+        <li><strong>Edit Account:</strong> `editaccount.jsp` pre‐filled form for updates, ensuring unique user IDs.</li>
+        <li><strong>Product Reviews:</strong> `product.jsp` lists reviews; `reviewpage.jsp` enforces one review per user.</li>
+        <li><strong>Search Bar:</strong> Instant product search from home page.</li>
+        <li><strong>Menu Bar:</strong> Persistent navigation with hover feedback.</li>
+        <li><strong>Shipping Confirmation:</strong> Pre‐filled address form during checkout.</li>
+        <li><strong>Personalized Greeting:</strong> “Welcome, [username]” after login; “Welcome, guest” otherwise.</li>
+        <li><strong>Category Search:</strong> Partial‐match lookup for product categories.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Walkthrough</h2>
+      <ol>
+        <li>Home page with menu and search bar to find products.</li>
+        <li>Add items to cart and proceed to checkout; authenticate credentials.</li>
+        <li>Confirm or edit shipping address on a pre‐filled form.</li>
+        <li>Handle out‐of‐stock errors gracefully.</li>
+        <li>Browse by category via hint‐based search.</li>
+        <li>Create and edit user accounts with live validation.</li>
+        <li>Submit and view product reviews; admins can monitor all orders.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Tech Stack</h2>
+      <ul>
+        <li>Java &amp; JSP (accountcreation.jsp, editaccount.jsp, product.jsp, reviewpage.jsp)</li>
+        <li>Servlets &amp; JDBC for SQL transactions</li>
+        <li>HTML, CSS &amp; JavaScript for front‐end</li>
+        <li>Relational Database (MySQL or SQLite)</li>
+        <li>Tomcat (or equivalent servlet container)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    &copy; 2025 Zain Ali
+  </footer>
+</body>
+</html>

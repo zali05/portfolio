@@ -611,3 +611,16 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+.project-screenshot-wrapper {
+    padding: 2rem 0;        /* adjust vertical space */
+    text-align: center;     /* center the img horizontally */
+  }
+  
+  /* responsive screenshot styling */
+  .project-screenshot {
+    max-width: 100%;        /* never overflow container */
+    height: auto;           /* maintain aspect ratio */
+    border-radius: 0.5rem;  /* optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle lift */
+  }

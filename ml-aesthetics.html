@@ -1,0 +1,125 @@
+<!-- ml-aesthetic-detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>ML Aesthetic Image Analysis | Zain Ali</title>
+  <link rel="stylesheet" href="index.css" />
+
+  <!-- page‐specific styling -->
+  <style>
+    /* Constrain & center the screenshot */
+    .project-header-image {
+      display: block;
+      margin: 1.5rem auto;     /* more breathing room */
+      width: 95%;              /* take up 80% of the container */
+      max-width: 1000px;        /* but never grow beyond 800px */
+      min-width: 400px;        /* ensure it’s not too narrow on big screens */
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- site header/navigation -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__link">&larr; Back to Portfolio</a>
+    </nav>
+    <div class="header__text-box row">
+      <div class="header__text">
+          <img
+              src="./images/aesthetics.png"
+              alt="Image of ML Aesthetic Image Analysis app"
+              class="project-header-image"
+          />
+          <div class="header__video-link">
+              <a href="https://drive.google.com/file/d/1ipRAyYrUxLa73HUljMvkrF0Z92mVVjY_/view?usp=sharing" 
+                 target="_blank" 
+                 class="link__text">
+                  Watch Video Presentation
+              </a>
+          </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container project-detail">
+    <h1>ML Aesthetic Image Analysis</h1>
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        Our system is a web-based user survey platform designed to collect responses on image aesthetics and provide powerful tools for survey management, data analysis, and visualization. It supports two user groups—end users who participate in the aesthetic survey and administrators who configure surveys and export analytics. Surveys are driven by JSON configuration files, and the interface is bilingual (English/French).  
+        :contentReference[oaicite:0]{index=0}&#8203;:contentReference[oaicite:1]{index=1}
+      </p>
+    </section>
+
+    <section>
+      <h2>System Architecture</h2>
+      <ul>
+        <li><strong>Frontend:</strong> React.js for a fast, component-based UI.</li>
+        <li><strong>Backend:</strong> Node.js + Express.js handling API logic and data workflows.</li>
+        <li><strong>Database:</strong> SQLite for lightweight, file-based storage of users, responses, and configs. </li>
+      </ul>
+      :contentReference[oaicite:2]{index=2}&#8203;:contentReference[oaicite:3]{index=3}
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Persistent Navigation:</strong> “Next”/“Previous” retains answers on back-and-forth moves :contentReference[oaicite:4]{index=4}&#8203;:contentReference[oaicite:5]{index=5}</li>
+        <li><strong>Consent & Underage Filter:</strong> Blocks under-age or non-consenting users before data capture :contentReference[oaicite:6]{index=6}&#8203;:contentReference[oaicite:7]{index=7}</li>
+        <li><strong>Progress Indicator:</strong> Circular bar shows survey completion percentage :contentReference[oaicite:8]{index=8}&#8203;:contentReference[oaicite:9]{index=9}</li>
+        <li><strong>Image Generation:</strong> Stable Diffusion + ControlNet pipeline for creating new “aesthetic” images :contentReference[oaicite:10]{index=10}&#8203;:contentReference[oaicite:11]{index=11}</li>
+        <li><strong>Admin Dashboard:</strong> Add/remove questions, upload JSON configs, export raw & analyzed data</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Aesthetics Prediction Model</h2>
+      <p>
+        We predict continuous aesthetic scores (1–10) by combining:  
+        (1) ResNet50 visual embeddings → PCA (retain 80% variance),  
+        (2) Handcrafted metrics (brightness, contrast, sharpness, symmetry, etc.),  
+        (3) ViT-generated semantic labels (one-hot encoded).  
+        These feature sets are concatenated and fed into a Random Forest Regressor for final score prediction.  
+        :contentReference[oaicite:12]{index=12}&#8203;:contentReference[oaicite:13]{index=13}
+      </p>
+    </section>
+
+    <section>
+      <h2>Image Generation Model</h2>
+      <p>
+        We use Stable Diffusion enhanced with ControlNet to generate high-fidelity images guided by structural hints. This combo outperforms BigGAN in detail, texture, and inference speed (~2.8s vs. ~10.7s per image).  
+        :contentReference[oaicite:14]{index=14}&#8203;:contentReference[oaicite:15]{index=15}
+      </p>
+    </section>
+
+    <section>
+      <h2>Evaluation Approach</h2>
+      <p>
+        Since aesthetics is subjective, we ran a user study (10 participants, 1–5 scale) and tracked computational metrics (latency, throughput, memory). Stable Diffusion images averaged 4.02/5 versus BigGAN’s 2.1/5, confirming user preference for our generation pipeline.  
+        :contentReference[oaicite:16]{index=16}&#8203;:contentReference[oaicite:17]{index=17}
+      </p>
+      <p>
+        On the ML model side, we measured MSE (0.5741) and R² (–0.0182) on a hold-out AVA dataset split, with a pseudo-accuracy of ~91.6%.  
+        :contentReference[oaicite:18]{index=18}&#8203;:contentReference[oaicite:19]{index=19}
+      </p>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>
+        This platform not only captures human aesthetic judgments via a seamless, multilingual survey but also leverages them to train and evaluate ML models and generation pipelines. Our modular design—React frontend, Express/SQLite backend, and Python-based ML—ensures portability and extensibility for future research and feature expansion.
+      </p>
+    </section>
+  </main>
+
+  <footer class="fo&#8203;:contentReference[oaicite:20]{index=20}

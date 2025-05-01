@@ -1,0 +1,136 @@
+<!-- virtual-library.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Library & Book Exchange | Zain Ali</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+   /* Constrain & center the screenshot */
+   .project-header-image {
+    display: block;
+    margin: 1.5rem auto;     /* more breathing room */
+    width: 95%;              /* take up 80% of the container */
+    max-width: 1000px;        /* but never grow beyond 800px */
+    min-width: 400px;        /* ensure it’s not too narrow on big screens */
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  </style>
+</head>
+<body>
+  <!-- header/nav -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__link">&larr; Back to Portfolio</a>
+    </nav>
+    <div class="header__text-box row">
+        <div class="header__text">
+            <img
+                src="./images/library.png"
+                alt="Virtual library landing page image"
+                class="project-header-image"
+            />
+            <div class="header__video-link">
+                <a href="https://github.com/A-R-Martin/COSC360-Project" 
+                   target="_blank" 
+                   class="link__text">
+                    View Code
+                </a>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <main class="container project-detail">
+    <h1>Virtual Library & Book Exchange Platform</h1>
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        A web-based virtual library and book exchange platform that enables users to browse, borrow, review, and exchange books seamlessly. It maintains user profiles, discussion threads, and real-time updates through a modular PHP and JavaScript architecture. citeturn2file0
+      </p>
+    </section>
+
+    <section>
+      <h2>Architectural Overview</h2>
+      <h3>Server-Side Components</h3>
+      <p>
+        Utilizes PHP scripts (config.php, db_connect.php, and multiple API endpoints) to interact with a MySQL database storing user profiles, book data, comments, reviews, and tracking information. Session management and security measures are implemented to handle authentication and form submissions safely. citeturn2file0
+      </p>
+      <h3>Client-Side Components</h3>
+      <p>
+        JavaScript files (scripts.js for form validation, tracking.js for user interaction logging, analytics_chart_utils.js for admin metrics visualization) leverage AJAX for asynchronous updates and ensure a responsive, dynamic user interface. citeturn2file0
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Files & Features</h2>
+      <h3>PHP Functionality</h3>
+      <ul>
+        <li><strong>index.php:</strong> Landing page showing featured books and discussion threads.</li>
+        <li><strong>signin.php & signup.php:</strong> User authentication with validation and transactional database operations.</li>
+        <li><strong>profile.php:</strong> User profile view/edit with image upload support.</li>
+        <li><strong>add_book.php & edit_book.php:</strong> Interfaces for adding and modifying book entries.</li>
+        <li><strong>book_detail.php & catalog.php:</strong> Display detailed book information and category listings.</li>
+        <li><strong>admin.php & admin_user_detail.php:</strong> Administrative dashboards for content moderation and user management.</li>
+        <li><strong>API Endpoints:</strong> Modular endpoints (api_admin.php, api_books.php, api_book_comments.php) for front-end/back-end communication.</li>
+      </ul>
+      <h3>Client-Side Scripts</h3>
+      <ul>
+        <li><strong>scripts.js:</strong> Handles form validation and dynamic content updates.</li>
+        <li><strong>tracking.js:</strong> Tracks user interactions for analytics and real-time updates.</li>
+        <li><strong>analytics_chart_utils.js:</strong> Generates charts for admin panel reporting.</li>
+      </ul>
+      <h3>Supporting Assets</h3>
+      <ul>
+        <li><strong>styles.css:</strong> Core responsive styling with a 2-3 column layout.</li>
+        <li><strong>Database Schemas:</strong> database.sql & tracking_schema.sql define core and tracking tables.</li>
+        <li><strong>Documentation & Tests:</strong> README.md and PHPUnit test suite ensure reliability and guide setup. </li>
+      </ul>
+      citeturn2file0
+    </section>
+
+    <section>
+      <h2>High-Level Operational Flow</h2>
+      <h3>User Flow</h3>
+      <p>
+        Visitors land on a responsive homepage; registered users authenticate to create or edit content, participate in discussions, and borrow or exchange books—all maintained via PHP sessions. citeturn2file0
+      </p>
+      <h3>Admin Flow</h3>
+      <p>
+        Admins use secure API-driven interfaces to monitor site activity, moderate content, and manage user policies, with real-time analytics and content controls. citeturn2file0
+      </p>
+      <h3>Data Communication</h3>
+      <p>
+        Modular PHP-based API endpoints handle data retrieval, modification, and storage, enabling seamless asynchronous interactions and real-time updates across the platform. citeturn2file0
+      </p>
+    </section>
+
+    <section>
+      <h2>Known Limitations & Future Improvements</h2>
+      <ul>
+        <li>Enhance error handling for database failures and edge-case inputs. citeturn2file0</li>
+        <li>Expand responsive testing across devices.</li>
+        <li>Implement ARIA labels and keyboard navigation for accessibility.</li>
+        <li>Optimize database queries and PHP code for scalability under high load.</li>
+        <li>Refine UI/UX with animations and improved visual feedback.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>
+        This Virtual Library integrates PHP, JavaScript, and MySQL to deliver a feature-rich, user-friendly platform, with ongoing improvements planned to enhance robustness and user experience. citeturn2file0
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    &copy; 2025 Zain Ali
+  </footer>
+</body>
+</html>

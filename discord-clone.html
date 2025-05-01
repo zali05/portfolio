@@ -1,0 +1,133 @@
+<!-- debugthugs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Discord Clone | Zain Ali</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    /* Constrain & center the screenshot */
+    .project-header-image {
+        display: block;
+        margin: 1.5rem auto;     /* more breathing room */
+        width: 95%;              /* take up 80% of the container */
+        max-width: 1000px;        /* but never grow beyond 800px */
+        min-width: 400px;        /* ensure it’s not too narrow on big screens */
+        height: auto;
+        object-fit: contain;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+  </style>
+</head>
+<body> 
+  <!-- site header/navigation -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__link">&larr; Back to Portfolio</a>
+    </nav>
+    <div class="header__text-box row">
+        <div class="header__text">
+            <img
+                src="./images/discord.png"
+                alt="DebugThugs app screenshot"
+                class="project-header-image"
+            />
+            <div class="header__video-link">
+                <a href="https://vimeo.com/934027930?share=copy&turnstile=0.TRYPKDHqDBFzPLiJ2JAb0bsqDi5wFrGlXVcE_55HEVvWsnwUfqmQIgg8-7rNmr5VpQVBRjqUP8I-3U-w0ArXOFVM3l7av3rfeSLtnWOAVlb5bZTkNanPGIbdMNRSg4vtQmhXK_C1xmnIfNYJeyC4pCCF30WtDjKlH9_y4L5OaOoNB5DELKxxZOE4ok2V3diDpxMEYSeKHOQyQm2QF8TVu13X1u-YtHKcsqPlYmjOwFGdA8BmEAC5MBzx7CIUO3ZXdyh0w8zUNVcLizWMeCu7lbTjXITpytZcGpV2GjBoVR4SdvOxxeGRpJquHJct9vl-H2XAOs4fT3_5CO25o-UxI91NmCJ-dSGMxbR6iyVl2s9ds9lV6ZsWbWWgsXtum9HsQluX3SNqR-LVAMN0-bL6dzW8ET8WjoPBRCQ7213Yh0tNpALEKyltLSbcAG49okRSNkrtt_zk4oc9D-h5u7NbLjkzm2zSK2nywJ5QI85DerdTfksOMIkHRGWq4eXpWvZ98BSjGCSSm6g2ZYpd4Lj1Z9rG8pbr7VHhal9dTVIkRndHRK_t21SksLOvxGn-FYxpXFTiYyH8-uralv55nsB_JJvpSK4XgVMVSeI2SCkpY_24zMEp0myqa3dop78kBbVoSobjMQNzGh2aNxS_XBtFddoCwlQXLt2CaeITDXDyMOGdPghNE4mjLkUGBOhtokmhqIGSahiC7AwDvWs41TRGfRp1moaIxnzOtFngjEgQPiqYKK8q1xU6gi-JCabThp2nfYUKJOR-vaWHkf20HHb7YPPh36P8YYPNHaFhrPD5H0YaKI3UZCR_nNjJuQ5gePoyYiQBiDLrCYjZTLSz8KBqRA.C-ISRigkTT65eaYXvDPLbg.1e55c6a318bc1bac8772d07e855f126f577cc08d779dfef7e39644b33c6e050a" 
+                   target="_blank" 
+                   class="link__text">
+                    Watch Video Presentation
+                </a>
+            </div>
+        </div>
+    </div>
+  </header>
+  
+  <main class="container project-detail">
+    <h1>Discord Clone</h1>
+
+    <section>
+      <h2>About Our Project</h2>
+      <p>
+        DebugThugs is a web-based application inspired by Discord.  
+        Started in early January, our goal was to deliver by April 12, 2024,  
+        a fully functional platform where users can register, log in,  
+        and manage their accounts, then join or create servers, groups,  
+        and private chats—complete with a permissions system for admins.
+      </p>
+    </section>
+
+    <section>
+      <h2>Project Description & Methodology</h2>
+      <p>
+        We followed Agile Scrum, with a dedicated Scrum Master facilitating  
+        weekly sprints and removing blockers.  Users sign up with name,  
+        username, password, and email; returning users log in.  Once inside,  
+        they can join channels, chat, invite others, or—if they’re channel  
+        admins—manage membership and messages.  A friends list lets users  
+        send/accept/decline requests and have 1-on-1 conversations.  Each user  
+        also has a profile where they can update personal info, bio, status,  
+        and avatar.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tech Stack</h2>
+      <ul>
+        <li>React (Front-end)</li>
+        <li>Express & Node.js (API)</li>
+        <li>SQLite (User & Message DB)</li>
+        <li>WebSockets (Real-time Chat)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Stakeholders & Roles</h2>
+      <ul>
+        <li><strong>Dev Team:</strong> Planning, implementation, delivery</li>
+        <li><strong>Scrum Master:</strong> Zain Ali: Run sprints, clear obstacles</li>
+        <li><strong>Prof. Rodriguez-Perez:</strong> Provide lectures & guidance</li>
+        <li><strong>Server Host:</strong> Host account, message, and voice servers</li>
+        <li><strong>End-Users:</strong> Beta test, give feedback, report bugs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Milestones & Timeline</h2>
+      <ol>
+        <li>Jan 22, 2024 – Team Agreement & Planning Framework</li>
+        <li>Feb 16, 2024 – Project Description & Requirements</li>
+        <li>Mar 8, 2024  – Formal Analysis & Architecture</li>
+        <li>Mar 29, 2024 – Testing & Automation Report</li>
+        <li>Apr 12, 2024 – Final Report & Delivery</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Success Criteria</h2>
+      <p>
+        Deliver all core features (accounts, chat, permissions, profiles)  
+        on time by following Scrum sprints and completing each milestone.
+      </p>
+    </section>
+
+    <section>
+      <h2>Repository</h2>
+      <p>
+        <a href="https://github.com/kjassani/DebugThugs" target="_blank" class="link__text">
+          View Code
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    &copy; 2025 Zain Ali
+  </footer>
+</body>
+</html>

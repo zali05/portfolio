@@ -1,0 +1,100 @@
+<!-- game-of-amazons.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game of the Amazons AI | Zain Ali</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    /* Constrain & center the screenshot */
+    .project-header-image {
+      display: block;
+      margin: 1.5rem auto;     /* more breathing room */
+      width: 95%;              /* take up 80% of the container */
+      max-width: 1000px;        /* but never grow beyond 800px */
+      min-width: 400px;        /* ensure it’s not too narrow on big screens */
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__link">&larr; Back to Portfolio</a>
+    </nav>
+    <div class="header__text-box row">
+        <div class="header__text">
+            <img
+                src="./images/imageai.png"
+                alt="Image AI game state"
+                class="project-header-image"
+            />
+            <div class="header__video-link">
+                <a href="https://github.com/leolelion/amazon-op" 
+                   target="_blank" 
+                   class="link__text">
+                    View Code
+                </a>
+            </div>
+        </div>
+      </div>
+  </header>
+
+  <main class="container project-detail">
+    <h1>Game of the Amazons AI</h1>
+
+    <section>
+      <h2>Overview</h2>
+      <p>The Game of the Amazons AI is a hybrid move‑selection engine designed with a clear separation between game logic, network communication, and UI components. It dynamically chooses between Monte Carlo Tree Search and Minimax with Alpha‑Beta Pruning based on board state, ensuring efficient and accurate decisions throughout the game.</p>
+    </section>
+
+    <section>
+      <h2>Techniques Employed</h2>
+      <h3>Monte Carlo Tree Search (MCTS)</h3>
+      <ul>
+        <li><strong>When Used:</strong> Early-to-mid game when more than 50 cells are empty.</li>
+        <li><strong>How It Works:</strong> Builds a search tree via random simulations, using UCT to balance exploration and exploitation.</li>
+        <li><strong>Why Effective:</strong> Handles large move spaces without exhaustive search, relying on statistical sampling.</li>
+      </ul>
+      <h3>Minimax with Alpha‑Beta Pruning</h3>
+      <ul>
+        <li><strong>When Used:</strong> Late game when fewer than 50 cells are empty.</li>
+        <li><strong>How It Works:</strong> Explores moves to a predefined depth, evaluates via heuristic, and prunes branches that cannot improve the outcome.</li>
+        <li><strong>Why Effective:</strong> Provides precise, deterministic decisions in tactical endgame scenarios.</li>
+      </ul>
+      <h3>Decision Mechanism</h3>
+      <p>The <code>Brain</code> class monitors the number of empty cells and selects MCTS or Minimax accordingly, adapting strategy to the game phase.</p>
+    </section>
+
+    <section>
+      <h2>Software Engineering Aspects</h2>
+      <h3>Modular Design & Separation of Concerns</h3>
+      <ul>
+        <li><strong>COSC322Test:</strong> Interfaces with the game server, GUI, and the <code>Brain</code> class, managing network messages via the <code>GameClient</code> API.</li>
+        <li><strong>Brain:</strong> Encapsulates AI logic, including move generation, algorithm selection, and win/loss checks, separate from UI and networking.</li>
+        <li><strong>Move:</strong> Represents a queen’s move and arrow placement, supports simulation without altering the live game state.</li>
+        <li><strong>MCTS & Minimax Classes:</strong> Implemented independently, allowing easy replacement or tuning of each algorithm.</li>
+      </ul>
+      <h3>Maintainability & Extensibility</h3>
+      <ul>
+        <li><strong>Clear Interfaces:</strong> Each class has a well-defined role, minimizing interdependencies.</li>
+        <li><strong>Encapsulation:</strong> Complex game logic contained within the <code>Brain</code> class to reduce duplication.</li>
+        <li><strong>API Integration:</strong> Communicates with the game server using standardized methods (e.g., <code>sendMoveMessage</code>).</li>
+        <li><strong>Testing & Debugging:</strong> Console logs report algorithm choice, move decisions, and state updates for easy troubleshooting.</li>
+        <li><strong>Adaptive Strategy:</strong> Dynamic algorithm switching ensures optimal performance across all game phases.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>This AI demonstrates a robust hybrid approach, combining MCTS and Minimax with clear modularity, making it both efficient in gameplay and maintainable for future enhancements.</p>
+    </section>
+  </main>
+
+  <footer class="footer container">&copy; 2025 Zain Ali</footer>
+</body>
+</html>
